@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychic Readings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #1e3c72, #2a5298);
+            color: #fff;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffd700;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+
+        .services, .about, .contact {
+            padding: 20px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .service h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 1rem;
+            color: #ffd700;
+        }
+
+        .about h2, .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .about p, .contact p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .contact form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact form input, .contact form textarea, .contact form button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background-color: #ffd700;
+            color: #1e3c72;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #ff6347;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 2rem;
+            color: #ffd700;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ff6347;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            padding: 15px 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .service h3 {
+                font-size: 1.3rem;
+            }
+
+            .service p {
+                font-size: 0.9rem;
+            }
+
+            .about h2, .contact h2 {
+                font-size: 1.8rem;
+            }
+
+            .about p, .contact p {
+                font-size: 1rem;
+            }
+
+            .contact form {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .service h3 {
+                font-size: 1.2rem;
+            }
+
+            .service p {
+                font-size: 0.8rem;
+            }
+
+            .about h2, .contact h2 {
+                font-size: 1.5rem;
+            }
+
+            .about p, .contact p {
+                font-size: 0.9rem;
+            }
+
+            .contact form input, .contact form textarea, .contact form button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mystical Visions</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Discover the Secrets of Your Future</h2>
+        <p>Our expert psychics offer tarot readings, astrology insights, and more.</p>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service">
+            <h3>Tarot Readings</h3>
+            <p>Gain clarity and guidance through our tarot experts.</p>
+        </div>
+        <div class="service">
+            <h3>Astrology Charts</h3>
+            <p>Understand your destiny with personalized astrological insights.</p>
+        </div>
+        <div class="service">
+            <h3>Crystal Healing</h3>
+            <p>Balance your energy with our powerful crystal healing sessions.</p>
+        </div>
+        <div class="service">
+            <h3>Love Readings</h3>
+            <p>Unlock the mysteries of your love life and relationships.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Mystical Visions, we are dedicated to helping you find clarity and peace in your life. Our team of experienced psychics specializes in a variety of practices, including tarot reading, astrology, and crystal healing. With years of expertise, we aim to guide you through life's challenges and unlock your full potential.</p>
+        <p>Whether you're seeking answers about love, career, or personal growth, our compassionate psychics are here to help. We believe that every individual has a unique path, and we are honored to be a part of your journey.</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Reach out to us with any questions or to schedule a session.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="social-icons">
+            <a href="https://wa.me" target="_blank" title="Whats

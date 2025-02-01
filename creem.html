@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Cream Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(to bottom, #7db9e8, #4a90e2);
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .products, .services {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .product, .service {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product:hover, .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .product img, .service img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .product h3, .service h3 {
+            font-size: 1.5rem;
+            margin: 15px 0 10px;
+        }
+
+        .product p, .service p {
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+
+        .product button, .service button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover, .service button:hover {
+            background-color: #357abd;
+        }
+
+        .about, .contact {
+            padding: 20px;
+            background: #e8f0fe;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .about h2, .contact h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .about p, .contact p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact form input, .contact form textarea, .contact form button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact form button {
+            background-color: #4a90e2;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .contact form button:hover {
+            background-color: #357abd;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                font-size: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .product h3, .service h3 {
+                font-size: 1.3rem;
+            }
+
+            .product p, .service p {
+                font-size: 0.9rem;
+            }
+
+            .product button, .service button {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hair Creams Galore</h1>
+        <nav>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Your Hair's Best Friend</h2>
+        <p>Discover our range of premium hair creams for every style and need.</p>
+    </section>
+
+    <section id="products" class="products">
+        <div class="product">
+            <img src="hair_cream1.jpg" alt="Hair Cream 1">
+            <h3>Smooth & Shine</h3>
+            <p>For silky, shiny hair all day long.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="hair_cream2.jpg" alt="Hair Cream 2">
+            <h3>Volume Boost</h3>
+            <p>Get the volume you always wanted.</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="hair_cream3.jpg" alt="Hair Cream 3">
+            <h3>Frizz Control</h3>
+            <p>Say goodbye to unruly hair.</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="service">
+            <img src="service1.jpg" alt="Service 1">
+            <h3>Hair Styling</h3>
+            <p>Professional hair styling for all occasions.</p>
+        </div>
+        <div class="service">
+            <img src="service2.jpg" alt="Service 2">
+            <h3>Hair Treatment</h3>
+            <p>Repair and rejuvenate your hair with our treatments.</p>
+        </div>
+        <div class="service">
+            <img src="service3.jpg" alt="Service 3">
+            <h3>Scalp Care</h3>
+            <p>Keep your scalp healthy and nourished.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>At Hair Creams Galore, we are passionate about hair care. Our products are crafted with high-quality ingredients to provide the best results for every hair type. From styling to treatment, we have something for everyone.</p>
+        <p>Our mission is to help you achieve healthy, beautiful hair with ease. Join us on this journey to hair perfection!</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Get in touch with us for any inquiries or feedback.</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Hair Creams Galore. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>
